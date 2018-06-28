@@ -1,5 +1,15 @@
 # Rich Text OT Type [![Build Status](https://travis-ci.org/ottypes/rich-text.svg?branch=master)](https://travis-ci.org/ottypes/rich-text)
 
+## Why fork?
+
+We're running on a fork of the original [`rich-text` operational transform type](https://github.com/ottypes/rich-text). This is because we have a need to store metadata on our rich text documents so that we can determine which book a given piece of content belongs to. We need to know this so that we can validate a user's access to the content in middleware.
+
+The alternative to this solution would have been to store a separate Mongo document that maps a book to all the chapters it owns, requiring a database lookup every time we submit an op, which would be quite heavy. This could naturally be eased a bit with caching, but cache invalidation is generally non-trivial, and storing metadata on the chapter itself feels more "natural".
+
+The result is an extremely small wrapper around the original type, which stores a metadata object on the document. Note that intermittent deltas should remain entirely unaffected, and it will only be stored on creation, and restored on fetch.
+
+## Introduction
+
 An OT Type for rich text documents.
 
 For documentation on the spec this type implements, see [ottypes/docs](https://github.com/ottypes/docs). Rich Text does not implement the optional `invert`, but does implement `normalize`, tranformCursor, `serialize`, and `deserialize`. Please refer to [ottypes/docs](https://github.com/ottypes/docs) for documentation.
