@@ -6,6 +6,7 @@ We need the following features on top of the original `rich-text` type:
 
   - additional metadata fields
   - support for complex attributes
+  - support for ShareDB's presence functionality with `transformPresence`
 
 ### Metadata fields
 
