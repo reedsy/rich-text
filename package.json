@@ -6,7 +6,7 @@
   "homepage": "https://github.com/ottypes/rich-text",
   "main": "index.js",
   "dependencies": {
-    "quill-delta": "reedsy/delta#9f5ec7da135e22d3a88e259fb67ca3e6adc86877"
+    "quill-delta": "reedsy/delta#17abf8405f86b97bbe01e9863ee74cca23b7d07c"
   },
   "devDependencies": {
     "chai": "^4.2.0",
