@@ -10,17 +10,17 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         # Use PAT instead of default Github token, because the default
         # token deliberately will not trigger another workflow run
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-    - uses: actions/setup-node@v2
+    - uses: actions/setup-node@v3
       with:
-        node-version: '14.x'
+        node-version: '18.x'
         registry-url: 'https://npm.pkg.github.com'
     - name: Install
       # Skip post-install to avoid malicious scripts stealing PAT
