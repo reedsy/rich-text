@@ -1,4 +1,4 @@
-# Rich Text OT Type [![Build Status](https://travis-ci.org/ottypes/rich-text.svg?branch=master)](https://travis-ci.org/ottypes/rich-text)
+# Rich Text OT Type [![Test](https://github.com/reedsy/rich-text/actions/workflows/test.yml/badge.svg)](https://github.com/reedsy/rich-text/actions/workflows/test.yml)
 
 ## Reedsy: Why fork?
 
