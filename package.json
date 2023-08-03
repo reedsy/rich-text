@@ -1,12 +1,12 @@
 {
   "name": "@reedsy/rich-text",
-  "version": "4.1.0-reedsy.2.0.1",
+  "version": "4.1.0-reedsy.3.0.0",
   "description": "OT type for rich text",
   "author": "Jason Chen <jhchen7@gmail.com>",
   "homepage": "https://github.com/ottypes/rich-text",
   "main": "index.js",
   "dependencies": {
-    "@reedsy/quill-delta": "^5.1.0-reedsy.2.1.1"
+    "@reedsy/quill-delta": "^5.1.0-reedsy.3.0.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
