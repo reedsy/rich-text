@@ -20,3 +20,5 @@ echo '!/lib' >> .gitignore
 
 git tag $VERSION
 git push origin refs/tags/$VERSION
+
+npm publish
