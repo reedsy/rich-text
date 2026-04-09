@@ -1,4 +1,4 @@
-const Delta = require("@reedsy/quill-delta");
+const Delta = require("@reedsy/quill-delta").Delta;
 var richText = require('../lib/type').type;
 var expect = require('chai').expect;
 
