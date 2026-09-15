@@ -12,7 +12,6 @@ then
 fi
 
 echo "Publishing version $VERSION"
-echo '!/lib' >> .gitignore
 npm publish --tag latest
 
 if ! git tag "$VERSION" || ! git push origin "refs/tags/$VERSION"
