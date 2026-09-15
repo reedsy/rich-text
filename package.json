@@ -1,6 +1,6 @@
 {
   "name": "@reedsy/rich-text",
-  "version": "4.1.0-reedsy.4.1.4",
+  "version": "4.1.0-reedsy.5.0.0",
   "description": "OT type for rich text",
   "author": "Jason Chen <jhchen7@gmail.com>",
   "homepage": "https://github.com/ottypes/rich-text",
@@ -17,7 +17,7 @@
     "sinon": "^15.2.0"
   },
   "engines": {
-    "node": ">=0.10"
+    "node": ">=24"
   },
   "license": "MIT",
   "scripts": {
