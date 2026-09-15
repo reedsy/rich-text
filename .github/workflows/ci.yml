@@ -27,6 +27,8 @@ jobs:
       run: npm rebuild && npm run prepare --if-present
     - name: Test
       run: npm test -- --forbid-only
+    - name: Check release script
+      run: bash -n release.sh
     - name: Release
       if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
       run: ./release.sh
