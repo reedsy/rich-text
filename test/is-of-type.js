@@ -15,8 +15,12 @@ describe('isOfType', function() {
     expect(richText.isOfType({ops: [{retain: 3}, {insert: 'x'}]})).to.be.false;
   });
 
+  it('rejects a document with other fields', function() {
+    expect(richText.isOfType({ops: [{insert: 'foo\n'}], metadata: {bookId: 'abc'}})).to.be.false;
+  });
+
   it('rejects values that are not documents', function() {
-    for (const value of ['foo', 1, null, undefined, [{insert: 'foo\n'}], {}]) {
+    for (const value of ['foo', 1, null, undefined, [{insert: 'foo\n'}], {}, {ops: [null]}, {ops: [1]}]) {
       expect(richText.isOfType(value)).to.be.false;
     }
   });
